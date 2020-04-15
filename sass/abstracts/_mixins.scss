@@ -1,0 +1,33 @@
+@mixin abCenter {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+}
+
+@mixin Center-ab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+}
+
+/*
+phone   600px
+tp      900px
+tl      1200px
+*/
+
+@mixin respond($break) {
+    @if $break == phone {
+        @media(max-width: 37.5em) { @content };
+    }
+
+    @if $break == tp {
+        @media(max-width: 56.25em) { @content };
+    }
+
+    @if $break == tl {
+        @media(max-width: 75em) { @content };
+    }
+}

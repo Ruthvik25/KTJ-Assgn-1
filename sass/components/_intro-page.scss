@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.header {
+	height: 100VH;
+	width: 100vw;
+	background: linear-gradient(to right top, rgba($color-purple,0.9), rgba($color-purple-dark,0.9));
+	background-size: cover;
+	background-position: bottom;
+	display: table;
+	position: relative;
+	overflow: hidden;
+
+	@include respond(tp) {
+		background-image: linear-gradient(to bottom, rgba($color-primary,0.8), rgba($color-purple,0.8)), url(../images/bckimg.jpg);
+	}
+}
+
+.header-cell-1 {
+	display: table-cell;
+	width: 60%;
+	
+	@include respond(tp) {
+		width: 100%;
+		display: '';
+	}
+}
+
+.header-cell-2 {
+	display: table-cell;
+	width: 40%;
+	@include respond(tp) {
+		width: 0%;
+		display: '';
+	}
+}
+
+#company-name {
+	position: absolute;
+	top: 40%;
+    left: 20%;
+	transform: translate(-40%,-20%);
+	text-align: center;
+
+	@include respond(tp) {
+		top: 50%;
+    	left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+.svgdiv {
+    margin-top: 6rem;
+    text-align: right;
+    float: right;
+}
+
+.h1-main {
+	font-family: 'Mukta', sans-serif;
+	display: block;
+	letter-spacing: 30px;
+	font-size: 60px;
+	animation-name: moveInTop;
+	animation-duration: 2s;
+	z-index: 10;
+
+	@include respond(tp) {
+		font-size: 40px;
+		letter-spacing: 20px;
+	}
+
+	@include respond(phone) {
+		font-size: 32px;
+		letter-spacing: 10px;
+	}
+}
+
+.h1-sub {
+	font-family: 'Montserrat', sans-serif;
+	display: block;
+	letter-spacing: 15px;
+	font-size: 20px;
+	margin-bottom: 30px;
+	animation-name: moveInBottom;
+	animation-duration: 2s;
+
+	@include respond(tp) {
+		font-size: 10px;
+		letter-spacing: 5px;
+		margin-bottom: 20px;
+	}
+}
+
+#Fname {
+	padding-left: 0.4em;
+}
+
+.mileft {
+	animation-name: moveInLeft;
+	animation-duration: 2s;
+}
+
+.miright {
+	animation-name: moveInRight;
+	animation-duration: 2s;
+}
+
+.mitop {
+	animation-name: moveInTop;
+	animation-duration: 2s;
+}
+
+.gap {
+	margin: 0 auto;
+	float: left;
+}
+
+#cart {
+    animation: move 5s ease infinite;
+}
+
+.hidden-intro {
+	opacity: 0;
+	overflow: hidden;
+}
+
+@include respond(tp) {
+	svg {
+		width: 0;
+		height: 0;
+	}
+}

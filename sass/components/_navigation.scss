@@ -1,0 +1,157 @@
+#topbar {
+	background-color: #ffff;
+	width: 100%;
+	position: fixed;
+	z-index: 10000;
+}
+
+.logo {
+	float: left;
+	height: 5rem;
+	@media (min-width: 900px) {
+		height: 3rem;
+	}
+}
+
+#ilogo {
+	float: left;
+	padding: 1rem 2rem 0px 6rem;
+	height: 5rem;
+
+	@media (min-width: 900px) {
+		height: 3rem;
+		padding-top: 0rem;
+	}
+}
+
+#contents {
+	overflow:hidden;
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+}
+
+#contents li {
+	list-style: none;
+	padding: 1rem 0 1rem 0;
+	display: block;
+}
+
+#contents li a {
+	height: 2rem;
+	padding: 1rem 2rem;
+	text-decoration:none;
+	&:hover {
+		background-color: blanchedalmond;
+	}
+}
+
+#health {
+	background-color: red;
+	color: white;
+}
+
+.menu-icon {
+	cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+	user-select: none;
+}
+
+.nav-icon {
+	background: black;
+	display: block;
+	height: 2px;
+	position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.nav-icon:before,
+.nav-icon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.nav-icon:before {
+	top: 5px;
+}
+
+.nav-icon:after {
+	top: -5px;
+}
+
+.menu-btn {
+	display: none;
+}
+
+.menu-btn:checked ~ #contents {
+	max-height: 100vh;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media (min-width: 1150px) {
+
+    #topbar {
+        border-radius: 200rem;
+        overflow: hidden;
+    }
+
+    #contents li {
+      float: left;
+    }
+    #contents li a {
+	  padding: 20px 30px;
+	  border-right: 1px solid blueviolet;
+	}
+	#left-element {
+		border-left: 1px solid blueviolet;;
+	}
+    #contents {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .menu-icon {
+      display: none;
+	}
+	#ilogo {
+		float: left;
+		padding: 2px 2rem 0px 6rem;
+		height: 3rem;
+	}
+}
+
+.gototop {
+	position: fixed;
+	height: 2rem;
+	width: 2rem;
+	text-decoration: none;
+	bottom: 2rem;
+	right: 2rem;
+	background-color: white;
+	color: white;
+	text-align: center;
+	font-size: 1rem;
+	padding-top: 0.3rem;
+	z-index: 5000;
+}

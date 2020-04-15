@@ -1,0 +1,60 @@
+
+.review {
+    background-color: wheat;
+}
+
+.row {
+    margin-bottom: 2rem;
+}
+
+.rRow {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 3rem 3rem 3rem 5rem;
+    position: relative;
+    background-color: rgb(169, 212, 81);
+
+    &__shape {
+        float: left;
+        width: 10rem;
+        height: 10rem;
+        shape-outside: circle(5rem at 50% 50%);
+        clip-path: circle(5rem at 50% 50%);
+        transform: translateX(-2rem);
+    }
+}
+
+.imagelink {
+    text-decoration: none;
+    cursor: default;
+    &:hover .rCaption {
+        opacity: 1;
+        visibility: visible;
+        
+    }
+}
+
+#rp1,
+#rp3 {
+    height: 100%;
+}
+
+#rp2 {
+    width: 100%;
+}
+
+.rCaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    backface-visibility: hidden;
+}

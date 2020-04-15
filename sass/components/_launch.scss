@@ -1,0 +1,25 @@
+.launch {
+	background-color: wheat;
+	height: 60rem;
+	@include respond(tl) {
+		height: 75rem;
+	}
+}
+
+#lh2 {
+	color: rgba(65,40,141,1);
+}
+
+.lh3 {
+	padding-left: 2rem;
+}
+
+.launching-soon {
+	padding-left: 1.5rem;
+}
+
+@include respond(phone) {
+	.composition {
+		padding: 1rem 5rem;
+	}
+}

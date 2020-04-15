@@ -1,0 +1,76 @@
+#footer {
+	background-color: #111111;
+    color: hsl(270, 10%, 45%);
+    border-top: 1px solid red;
+	height: 35rem;
+	
+	@include respond(tp) {
+		height: 40rem;
+	}
+
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+	width: 100%;
+
+	&-links {
+		text-align: center;
+
+		@include respond(tl) {
+			text-align: left;
+		}
+
+		@include respond(tp) {
+			text-align: center;
+		}
+	}
+
+	&-links ul {
+		list-style: none;
+		
+		@include respond(tp) {
+			margin-top: 20rem;
+		}
+
+		@include respond(phone) {
+			margin-top: 0;
+		}
+	}
+
+	&-links li {
+		margin-top: 20rem;
+		padding-right: 2rem;
+		display: inline-block;
+
+		@include respond(tp) {
+			display: block;
+			margin-top: 0;
+		}
+
+		@include respond(phone) {
+			display: inline-block;
+			margin-top: 2rem;
+		}		
+	}
+
+	&-image {
+		text-align: center;
+		margin-top: 10rem;
+		margin-bottom: 2rem;
+	}
+
+	&-logo {
+		height: 5rem;
+	}
+}
+
+.footer-link:visited,
+.footer-link:link {
+	color: hsl(270, 10%, 45%);
+	text-decoration: none;
+	display: inline-block;
+}
+
+#copyright {
+	padding: 2rem;
+}

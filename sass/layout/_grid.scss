@@ -1,0 +1,54 @@
+.row {
+    max-width: 100 rem;
+    margin: 0 auto;
+    color: rgb(88, 85, 85);
+}
+
+.row:not(:last-child) {
+    margin-bottom: 8rem;
+}
+.col-1-2 {
+    float: left;
+    width: calc((100% - 6rem) / 2);
+
+    @include respond(phone) {
+        width: 100% !important;
+    }
+}
+.col-1-2:not(:last-child) {
+    margin-right: 6rem;
+}
+
+.col-1-3 {
+    float: left;
+    width: calc((100% - 2*(2rem)) / 3);
+    background-color: white;
+
+    @include respond(tp) {
+        width: 100% !important;
+    }
+}
+.col-1-3:not(:last-child) {
+    margin-right: 2rem;
+
+    @include respond(tp) {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.col-1-5 {
+    float: left;
+    width: calc((100% - 4*(2rem)) / 5);
+
+    @include respond(tl) {
+		width: calc((100% - 2*(2rem)) / 3);
+    }
+    
+    @include respond(tp) {
+		width: 100% !important;
+    }
+}
+.col-1-5:not(:last-child) {
+    margin-right: 2rem;
+}

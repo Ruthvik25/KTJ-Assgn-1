@@ -1,0 +1,33 @@
+#suprise {
+	background-color: #f8971c;
+	height: 60rem;
+
+	@include respond(tp) {
+        height: 175rem;
+	}
+	
+	@media (max-width: 300px) {
+        height: 125rem;   
+    }
+}
+.sh3-name, .sh3-brand,.spara {
+	padding: 0.3rem;
+	text-align: center;
+	font-weight: 400;
+}
+
+#srow {
+	margin: 0rem 20rem;
+	
+	@include respond(tl) {
+		margin: 0rem 5rem;
+	}
+
+	@include respond(tp) {
+        margin: 0rem 15rem;
+    }
+
+	@include respond(phone) {
+        margin: 0rem 10rem;
+    }
+}

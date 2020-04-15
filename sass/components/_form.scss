@@ -1,0 +1,78 @@
+.form {
+    background-color: $color-primary;
+    border-top: 1px solid red;
+    position: relative;
+    height: 40rem;
+}
+
+.rForm-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden;
+    display: table; 
+    
+    @include respond(tp) {
+        width: 80%;
+    }
+
+    @include respond(phone) {
+        width: 90%;
+    }
+}
+
+.rForm-left {
+    width: 40%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1rem;
+    @media (max-width: 400px) {
+        width: 100%;   
+    }
+}
+
+.rForm-right {
+    width: 60%;
+    display: table-cell;
+    
+    @media (max-width: 400px) {
+        width: 0;   
+    }
+}
+
+.rForm-img {
+    display: block;
+    width: 100%;
+}
+
+#rForm-h2 {
+    color: $color-purple;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.fed-form {
+
+    &__input {
+        width: 100%;
+        display: block;
+        border: none;
+        font-size: 1.2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-bottom: 4px solid transparent;
+
+        &:focus {
+            outline: none;
+            border-bottom: 4px solid $color-purple;
+        }
+    }
+
+}
+
+#textbox {
+    overflow: scroll;
+}
